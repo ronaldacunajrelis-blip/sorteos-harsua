@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteos Harsua</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #c2ac1a; /* Color Dorado Principal */
+            color: white;
+            text-align: center;
+        }
+        .header { background: #fff; padding: 10px; border-bottom: 3px solid #000; }
+        .logo-container { width: 100px; height: 100px; margin: -50px auto 10px; border-radius: 15px; overflow: hidden; border: 3px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.3); background: #eee; }
+        .banner-promo { background: #000; color: #c2ac1a; padding: 12px; font-weight: bold; margin: 20px auto; width: 85%; border-radius: 10px; border: 1px solid #fff; }
+        
+        .main-content { padding: 20px; }
+        h1 { font-size: 26px; text-transform: uppercase; margin-bottom: 5px; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+        .bio { font-size: 14px; margin-bottom: 20px; line-height: 1.5; font-style: italic; }
+        
+        .section-title { font-size: 20px; font-weight: bold; border-bottom: 2px solid #fff; display: inline-block; margin: 20px 0 10px; text-transform: uppercase; }
+        
+        .payment-card { background: white; color: #333; padding: 15px; border-radius: 15px; margin: 10px auto; width: 85%; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+        .bank-logo { width: 100%; max-width: 160px; display: block; margin: 0 auto 10px; }
+        
+        .copy-field { background: #f0f0f0; padding: 12px; border-radius: 8px; margin: 8px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border: 1px dashed #c2ac1a; color: #000; }
+        .copy-field strong { color: #c2ac1a; font-size: 1.1em; }
+
+        .btn-whatsapp { display: block; background: #25d366; color: white; padding: 15px; margin: 25px auto; border-radius: 30px; text-decoration: none; font-weight: bold; width: 80%; font-size: 18px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        
+        .footer { margin-top: 40px; padding-bottom: 20px; font-size: 12px; opacity: 0.9; }
+        .highlight { color: #000; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2 style="color:#000; margin:0; letter-spacing: 2px;">SORTEOS HARSUA</h2>
+    </div>
+
+    <div class="main-content">
+        <div class="logo-container">
+            <img src="https://via.placeholder.com/100" alt="Logo Sorteos Harsua" style="width: 100%;">
+        </div>
+
+        <div class="banner-promo">
+            JUEGAS CON: 1.440 Bs <br>
+            <span style="font-size: 0.8em; color: #fff;">(Equivalente a 2$ - Compra mínima)</span>
+        </div>
+
+        <h1>SORTEOS HARSUA</h1>
+        <p class="bio">
+            🇻🇪 Caracas 📍 Amante a la tecnología y el estilo ⌚️<br>
+            Nada es imposible, en busca de hacer un sueño realidad 💭
+        </p>
+
+        <div class="section-title">SORTEO ACTUAL</div>
+        <div style="background: #fff; color: #000; padding: 20px; border-radius: 15px; margin: 10px auto; width: 85%; border: 3px solid #000;">
+            <h3 style="margin:0; font-size: 22px;">RELOJ TECHNO MARINE</h3>
+            <p style="margin:10px 0; font-weight: bold; color: #c2ac1a;">TICKET: 720 Bs ($1)</p>
+            <p style="margin:5px 0; font-size: 14px;">Mínimo de participación: <span class="highlight">2 Tickets</span></p>
+            <p style="margin:5px 0; font-size: 14px;">Lotería: <span class="highlight">Super Gana</span></p>
+        </div>
+
+        <div class="section-title">DATOS PAGO MÓVIL</div>
+        <div class="payment-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Logo_Banco_Bicentenario.png/800px-Logo_Banco_Bicentenario.png" alt="Banco Bicentenario" class="bank-logo">
+            
+            <p style="font-size: 11px; margin-bottom: 8px; text-align: center; color: #666;">Toca para copiar:</p>
+            
+            <div class="copy-field" onclick="copyToClipboard('04125156062')">
+                <span>Teléfono: <strong>04125156062</strong></span>
+                <i class="far fa-copy"></i>
+            </div>
+            
+            <div class="copy-field" onclick="copyToClipboard('14757876')">
+                <span>Cédula: <strong>14757876</strong></span>
+                <i class="far fa-copy"></i>
+            </div>
+            
+            <p style="margin: 12px 0 0; font-size: 14px; text-align: center;"><strong>Banco Bicentenario</strong></p>
+        </div>
+
+        <div class="section-title">CONTACTO</div>
+        <p style="margin: 10px 0; font-weight: bold;">Instagram: @harsua_gabriel</p>
+        
+        <a href="https://wa.me/584125159062" class="btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> ENVIAR COMPROBANTE
+        </a>
+    </div>
+
+    <div class="footer">
+        © 2026 Sorteos Harsua. <br>
+        Caracas, Venezuela.
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const tempAlert = document.createElement("div");
+                tempAlert.innerHTML = "¡Copiado!";
+                tempAlert.style.position = "fixed";
+                tempAlert.style.bottom = "20px";
+                tempAlert.style.left = "50%";
+                tempAlert.style.transform = "translateX(-50%)";
+                tempAlert.style.background = "#000";
+                tempAlert.style.color = "#fff";
+                tempAlert.style.padding = "10px 20px";
+                tempAlert.style.borderRadius = "20px";
+                tempAlert.style.zIndex = "1000";
+                document.body.appendChild(tempAlert);
+                setTimeout(() => tempAlert.remove(), 2000);
+            });
+        }
+    </script>
+
+</body>
+</html>
